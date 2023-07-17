@@ -1,11 +1,7 @@
-import os
 import streamlit as st
 import pandas as pd
 st.write('Hello')
-  path = "Collection_All.xlsx"
-    if not os.path.isfile(path):
-        path = f"https://github.com/sadat76/streamlit/raw/main/{path}"
-    data = pd.read_excel(path)
-#df=pd.read_excel(r'C:\Users\engsa\OneDrive\الأرشيف\2023\00\PowerBI\Projects\Collection_2\Collection_All.xlsx')
-st.write(data)
+## Data
+ data = pd.read_excel('Collection_All.xlsx',sheet_name = 'Sheet1')
+  st.write(data)
 st.write('finish')
